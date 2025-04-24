@@ -21,8 +21,7 @@ def calcular_inss(salario_base):
     return min(inss, 1051.05)
 
 def calcular_irrf(salario_base, dependentes):
-    inss = calcular_inss(salario_base)
-    base_ir = salario_base - inss  
+    base_ir = salario_base 
 
     if base_ir <= 2112.00:
         irrf = 0
@@ -67,6 +66,7 @@ def calcular_salario_liquido():
     salario_liquido = salario_base - descontos
 
     print("\n--- Folha de Pagamento ---")
+    print(f"Descontos: R$ {descontos}")
     print(f"Salário Base: R$ {salario_base:.2f}")
     print(f"INSS: R$ {inss:.2f}")
     print(f"IRRF: R$ {irrf:.2f}")
@@ -75,5 +75,4 @@ def calcular_salario_liquido():
     print(f"Plano de Saúde: R$ {saude:.2f}")
     print(f"Salário Líquido: R$ {salario_liquido:.2f}")
 
-# Executar o sistema
 calcular_salario_liquido()
