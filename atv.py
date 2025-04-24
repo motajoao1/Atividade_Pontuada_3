@@ -43,7 +43,7 @@ def calcular_vale_refeicao(valor_vr):
     return valor_vr * 0.20
 
 def calcular_plano_saude(dependentes):
-    return dependentes * 150.00
+    return (1 + dependentes) * 150.00
 
 def calcular_salario_liquido():
     autenticar_funcionario()
